@@ -1,0 +1,91 @@
+/*Globals Styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+#main-container{
+    min-height: calc(100vh - 56px);
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/*Flash Messages*/
+.msg-container {
+    margin: 0 auto;
+    width: 60%;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #383333 ;
+}
+
+.msg-error {
+    color: #ca0606;
+    background-color: #e9bbbb;
+}
+.msg-sucess {
+    color: #018016;
+    background-color: #72ec97;
+}
+
+
+/*Login and Register Page*/
+
+#auth-row{
+    justify-content: space-evenly;
+}
+
+.title-form-auth{
+    text-align: center;
+}
+
+.line-divisor{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid rgb(2, 92, 226);
+}
+
+.card-btn{
+    background-color: #08a1dd;
+    border: none;
+    border: 1px solid #17d13f;
+}
+
+.card-btn:hover{
+    background-color: #3add08;
+    border: none;
+    border: 1px solid #d17117;
+}
+
+
+
+
+
+
+/*Footer*/
+#footer {
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.social-container ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.footer .social-container a {
+    font-size: 36px;
+    color: rgb(54, 66, 235);
+}
