@@ -67,6 +67,27 @@
 
     }else if($type==="changepassword"){
 
+        $userData = $userDao->verifyToken();
+
+        
+        $password = filter_input(INPUT_POST,"password");
+        $confirmpassword = filter_input(INPUT_POST,"confirmpassword");
+
+        $id=$userData->id;
+        
+        $user = new User();
+        $user->password = $password;
+        $user->id = $id;
+
+        
+        if($password===$confirmpassword){
+            $userDao->changePassword($user);
+            echo $password . " " . $confirmpassword;exit;
+        }else{
+            $message->setMessage("senhas precisam ser iguais", "msg-error", 'back');
+        }
+
+        
     }
     else{
         $message->setMessage("User malicioso", "msg-error", 'index.php');

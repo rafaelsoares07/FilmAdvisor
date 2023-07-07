@@ -19,17 +19,19 @@
 
 <body>
 <header>
-    <nav class="navbar navbar-light bg-info">
+    <nav class="navbar navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
+            <a class="navbar-brand" href="<?=$BASE_URL?>index.php">
+                <img src="<?=$BASE_URL?>img/logo.png" alt="">
+            </a>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Nome do filme" aria-label="Search">
+                <input class="form-control me-2 input-busca" type="search" placeholder="Nome do filme" aria-label="Search">
                 <button class="btn btn-outline-secondary" type="submit">Buscar</button>
             </form>
             <?php if($userData):?>
                 <a href="<?=$BASE_URL?>newmovie.php" class="link-secondary">Incluir Filme</a>
                 <a href="<?=$BASE_URL?>dashboard.php" class="link-secondary">Meus Filmes</a>
-                <a href="<?=$BASE_URL?>editprofile.php" class="link-secondary"><?=$userData->name?></a>
+                <a href="<?=$BASE_URL?>editprofile.php" class="link-secondary">Perfil</a>
                 <a href="<?=$BASE_URL?>logout.php" class="link-secondary">Sair</a>
             <?php else:?>
                 <a href="<?=$BASE_URL?>auth.php" class="link-secondary">Entar/Cadastrar</a>

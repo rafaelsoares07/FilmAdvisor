@@ -85,8 +85,6 @@
                 $this->message->setMessage("voce presica logar primeiro2", "msg-error","index.php");
             }
         }
-
-
         public function setTokenToSession($token, $redirect = true){
             //salvar token na sessao
 
@@ -95,8 +93,6 @@
                 $this->message->setMessage("Seja bem vindo", "msg-sucess","editprofile.php");
             }
         }
-
-
         public function authenticateUser($email, $password){
             $user = $this->findByEmail($email);
 
@@ -174,8 +170,19 @@
 
             $this->message->setMessage("deslogou com sucesso", "msg-sucess","index.php");
         }
-        public function changePassword(User $user){
+        public function changePassword(User $user, $redirect=true){
+            $stmt = $this->coon->prepare("UPDATE users SET password=:password WHERE id=:id");
 
+            $newPassword = $user->generatePassword($user->password);
+
+            $stmt->bindParam(":password", $newPassword);
+            $stmt->bindParam(":id", $user->id);
+
+            $stmt->execute();
+
+            if($redirect){
+                $this->message->setMessage("Dados atualizados com sucesso", "msg-sucess","editprofile.php");
+            }
         }
     }
 ?>

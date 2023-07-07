@@ -51,7 +51,7 @@ require_once("meta-html.php");?>
                         <input class="form-control-file" type="file" name="image" id="image">
                     </div>
                     <div class="form-group">
-                        <label for="bio" class="bio-description">Fale um pouco sobre você</label>
+                        <label for="bio" class="label-description">Fale um pouco sobre você</label>
                         <textarea name="bio" id="bio" rows="4"><?=$userData->bio?></textarea>
                     </div>
                 </div>
