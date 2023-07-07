@@ -69,7 +69,7 @@ else if($type==="login"){
 
     if($userDao->authenticateUser($email, $password)){
     
-        $message->setMessage("Seja bem vindo deu certo a autenticacao","msg-sucess", "editprofile.php");
+        $message->setMessage("Seja bem vindo!!","msg-sucess", "editprofile.php");
     }
     else{
         $message->setMessage("Usuário ou senha incorretos","msg-error", "back");

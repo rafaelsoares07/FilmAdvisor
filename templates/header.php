@@ -15,9 +15,6 @@
 
     $userData = $userDao->verifyToken(false);
 
-    print_r($userData);
-
-
 ?>
 
 <body>
