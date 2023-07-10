@@ -24,8 +24,8 @@
             <a class="navbar-brand" href="<?=$BASE_URL?>index.php">
                 <img src="<?=$BASE_URL?>img/logo.png" alt="">
             </a>
-            <form class="d-flex">
-                <input class="form-control me-2 input-busca" type="search" placeholder="Nome do filme" aria-label="Search">
+            <form class="d-flex" action="movieseach.php" method="POST">
+                <input class="form-control me-2 input-busca" type="text" name="search" placeholder="Nome do filme" aria-label="Search">
                 <button class="btn btn-outline-secondary" type="submit">Buscar</button>
             </form>
             <?php if($userData):?>

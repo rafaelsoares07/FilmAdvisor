@@ -17,13 +17,24 @@ $movies = $movieDao->findByUserId($userData->id);
 
 <?php include_once("templates/header.php")?>
 
-<div id="main-container" class="container-fluid">
+<div id="main-container-edit" class="container-fluid">
 
+    <div class="section-dashboard-movies">
+        <div>
+            <h3>Seus Filmes</h3>
+            <p class="category-description">Aqui estão todos os filmes que você cadastrou</p>
+        </div>
+        
+        <div id="profile-image-movies" style="background-image: url(<?= $BASE_URL ?>img/users/<?=$userData->image?>)">
+        </div>
 
-    <h3>Seus Filmes</h3>
-    <p class="category-description">Aqui estão os ultimos filmes lançados</p>
-    <div class="movies-view-container">
+    </div>
+    
+   
+
+    <div class="d-flex">
         <?php foreach($movies as $movie):?>
+        
             <div class="movie-container" style="margin-bottom:50px;">
                 <img class="movie-img" src="<?=$BASE_URL?>img/movies/<?=$movie->image?>" alt="" srcset="">
                 <div class="movie-info">
@@ -37,15 +48,33 @@ $movies = $movieDao->findByUserId($userData->id);
                         <p class="movie-title"><?=$movie->title?></p>
                     </div>
                     <div class="movie-btn-container">
-                        <a href="<?=$BASE_URL?>moviereview.php?id=<?=$movie->id?>" class="movie-btn movie-btn-solid">Avaliar</a>
+                       
+                        <form action="<?=$BASE_URL?>editmovie.php" method="post">
+                            <input type="hidden" name="type" value="edit">
+                            <input type="hidden" name="id" value="<?=$movie->id?>">
+                            <button type="submit" class="btn-bu">
+                            <i class="fa-solid fa-pen-to-square icon"></i>
+                            </button>
+                        </form>
+
                         
-                        <a href="#" class="movie-btn movie-btn-solid">Conhecer</a>
+                        <form action="<?=$BASE_URL?>movie_process.php" method="post">
+                            <input type="hidden" name="type" value="delete">
+                            <input type="hidden" name="id" value="<?=$movie->id?>">
+                            <button type="submit" class="btn-bu">
+                            <i class="fa-solid fa-trash icon"></i>
+                            </button>
+                        </form>
+                        
                     </div>
                 </div>
             </div>
+            
         <?php endforeach;?>
     </div>
-</div>
+    
+    </div>
+
 
 
 <?php include_once("templates/footer.php")?>

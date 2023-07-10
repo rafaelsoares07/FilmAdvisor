@@ -13,6 +13,21 @@
         public function imageGenerateName(){
             return bin2hex(random_bytes(60)).".jpeg";
         }
+
+        function convertYouTubeURL($url) {
+            $parsedURL = parse_url($url);
+            print_r($parsedURL);
+            parse_str($parsedURL['query'], $query);
+            print_r($query);
+            if (isset($query['v'])) {
+                $videoID = $query['v'];
+                echo $videoID;
+                $embedURL = "https://www.youtube.com/embed/" . $videoID;
+                return $embedURL;
+            }
+        
+            return $url;
+        }
     }
 
     interface MovieDAOInterface{

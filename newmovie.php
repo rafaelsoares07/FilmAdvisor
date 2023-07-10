@@ -17,7 +17,7 @@ require_once("meta-html.php");?>
     <div class="col-md-12 ">
         <form action="<?=$BASE_URL?>movie_process.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="type" value="create"> <!--Indicar a ação desse form-->
-            <h1 >Cadastrar novo filme</h1>
+            <h1 >Cadastrar Novo Filme</h1>
             <div class="row">
                 <div class="col-md-7 ">
                     
@@ -47,8 +47,9 @@ require_once("meta-html.php");?>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="label-description">Duração</label>
-                        <input class="form-control" type="text" name="length" id="length" value="">
+                        <label for="lenth">Duração</label>
+                        <input class="range-input" id="pi_input" type="range" min="0" max="200" step="1" name="length" />
+                        <p><output id="value-range"></output> min</p>
                     </div>
 
                     <div class="form-group">

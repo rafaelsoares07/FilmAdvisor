@@ -10,6 +10,8 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.js" integrity="sha512-jxHTIcyuk3K/8tFI4UWP/2XfMAnBUL/GCcY0ah39DQfnsG8+YgtAJsOE8fznN+jWqwgLazJMEpmyE9HW1Mmc+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="<?=$BASE_URL?>js/deleteModal.js"></script>
 </body>
 
 </html>

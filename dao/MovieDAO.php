@@ -106,5 +106,36 @@
             
             return ($obj);
         }
+
+
+        public function destroy($id){
+            $stmt = $this->coon->prepare("DELETE FROM movies WHERE id=:id");
+
+            $stmt->bindParam(":id", $id);
+
+            $stmt->execute();
+            
+            $this->message->setMessage("Seu filme foi deletado com sucesso!", "msg-error", "back");
+        }
+
+        public function findMoviesByTitleName($title){
+            $stmt = $this->coon->prepare("SELECT * FROM movies
+            WHERE title LIKE :title");
+
+            $stmt->bindValue(":title", '%'.$title.'%');
+
+            $stmt->execute();
+
+            $movies = $stmt->fetchAll();
+            
+            $allMovies =[];
+
+            foreach($movies as $movie){
+                $allMovies[] = $this->buildMovie($movie);
+            }
+
+            return($allMovies);
+
+        }
     }
 ?>

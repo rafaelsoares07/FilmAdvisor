@@ -29,13 +29,15 @@
 
         $movie = new Movie();
 
+        $formatTrailer = $movie->convertYouTubeURL($trailer);
+
 
         //validaacao minima de dados
 
         if(!empty($title) && !empty($description) && !empty($category)){
             $movie->title = $title;
             $movie->description = $description;
-            $movie->trailer = $trailer;
+            $movie->trailer = $formatTrailer;
             $movie->category = $category;
             $movie->length = $length;
             $movie->users_id = $userData->id;
@@ -75,7 +77,8 @@
             $movieDAO->create($movie);
             
 
-        }else{
+        }
+        else{
             $message->setMessage("precisa de pelo menosos dados minimos", "msg-error", "back");
         }
         
@@ -86,8 +89,30 @@
         echo "CATEGORIA: " . $category . "<br>";
         echo "DURACAO: " . $length . "<br>";
 
+    }
+    elseif($type==="delete"){
+
+        $id = filter_input(INPUT_POST, "id");
+
+        $movie = $movieDAO->findByMovieId($id);
+        $userId = $userData->id;
+
+        if($movie){
+
+            if($movie->users_id===$userId){
+                $movieDAO->destroy($id);
+            }else{
+                $message->setMessage("Você não é o dono desse filme", "msg-error", "back");
+            }
+
+        }else{
+            $message->setMessage("Esse filme não pode ser deletado no momento", "msg-error", "index.php");
+        }
+
+        
+        
     }else{
-        $message->setMessage("nao é o form certo", "msg-error", "index.php");
+        $message->setMessage("Tipo de ação não implementada no process ", "msg-error", "index.php");
     }
 
 ?>

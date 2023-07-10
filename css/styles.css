@@ -58,7 +58,7 @@ header{
     border: 2px solid rgb(2, 92, 226);
 }
 
-.card-btn{
+.card-btn, .btn-bu{
     border: 1px solid transparent;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -73,11 +73,16 @@ header{
     background-color: #152ae2;
 }
 
-.card-btn:hover{
+.card-btn:hover, .btn-bu:hover{
     background-color:#fff;
     color: black;
     border: 1px solid #152ae2;
 }
+
+.icon{
+    font-size: 14px;
+}
+
 
 
 
@@ -184,6 +189,8 @@ header{
     </div>
 </div>*/
 
+
+
 .movies-view-container{
     margin: 30px 0 ;
     display: flex;
@@ -244,7 +251,10 @@ header{
 
 .movie-title{
     font-weight: 600;
-    
+    height: 24px; /* Defina a altura desejada para a div */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .details{
@@ -295,4 +305,102 @@ textarea{
 
 select{
     width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.dashboard-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dashboard-text{
+    max-width: 400px;
+    margin-left: 10px;
+}
+
+
+.dashboard-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.area-stars{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+.movies-view{
+    grid-template-columns:repeat(auto-fit, minmax(165px,1fr));
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+
+
+
+#modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid blue;
+    backdrop-filter: blur(5px);
+    z-index: 200;
+}
+
+.modal-img{
+    width: 100%;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.range-input{
+    width: 100% !important;
+}
+
+
+
+
+#profile-image-movies{
+    width: 55px;
+    height: 55px;
+    border: 1.5px solid rgb(3, 37, 65);
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.section-dashboard-movies{
+    display: flex;
+    justify-content: space-between;
 }
