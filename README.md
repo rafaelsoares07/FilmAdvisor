@@ -39,7 +39,8 @@ Este projeto é um site de filmes personalizado, desenvolvido com base nos princ
 
 ## 🏁 Telas da aplicação
 ### Tela inicial:
-![screencapture-localhost-curso-php-udemy-Curso-FilmAdvisor-index-php-2023-07-15-15_20_42](https://github.com/rafaelsoares07/FilmAdvisor/assets/88918826/0aaffb01-d3ee-48c2-9c06-865166f9e327)
+![screencapture-localhost-curso-php-udemy-Curso-FilmAdvisor-index-php-2023-07-15-16_02_51](https://github.com/rafaelsoares07/FilmAdvisor/assets/88918826/8db8dbd3-7940-4d5e-902b-fd2dd8a2ef84)
+
 
 ### Tela de perfil:
 ![screencapture-localhost-curso-php-udemy-Curso-FilmAdvisor-editprofile-php-2023-07-15-15_22_58](https://github.com/rafaelsoares07/FilmAdvisor/assets/88918826/71711456-5e8c-40d2-8027-30f29d2be97e)
