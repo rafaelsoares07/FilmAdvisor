@@ -18,6 +18,7 @@ Este projeto é um site de filmes personalizado, desenvolvido com base nos princ
   
 
 ## :rocket: Funcionalidades
+
 **Cadastro de Usuário:** Você pode criar uma conta pessoal no site, fornecendo informações básicas, como nome de usuário, e-mail e senha. Isso permitirá que você acesse todas as funcionalidades do site.
 
 **Login de Usuário:** A funcionalidade de login permite que os usuários acessem sua conta pessoal no site fornecendo suas credenciais de login, como nome de usuário/e-mail e senha. Ao fazer o login com sucesso, os usuários têm acesso a todas as funcionalidades do site, incluindo a exploração de filmes, avaliação de filmes e interações sociais.
@@ -26,9 +27,15 @@ Este projeto é um site de filmes personalizado, desenvolvido com base nos princ
 
 **Avaliação de Filmes:** Dê sua opinião sobre os filmes que assistiu. Através do site, você pode atribuir uma classificação e escrever uma crítica para cada filme.
 
-**Perfil de Usuário:** Seu perfil personalizado exibirá suas informações básicas cadastradas no seu perifl e os filmes que você já cadastrou na plataforma.
+**Deleção de Filmes** Os usuários têm a opção de remover filmes do catálogo. Ao selecionar a opção de deleção, o sistema utiliza o padrão DAO para excluir o filme selecionado do banco de dados de forma segura. 
+
+**Edição de Filmes** Os usuários têm a capacidade de editar informações de filmes existentes no catálogo. Ao selecionar a opção de edição, o sistema exibe um formulário com os campos relevantes, 
+
+**Perfil de Usuário:** Seu perfil personalizado exibirá suas informações básicas cadastradas no seu perifl e os filmes que você já cadastrou na plataforma sendo possível a alteração de alguns desses dados.
 
 **Sistema de Mensageria** Todas as ações importantes que o usuário faz dentro do site dispara um modal de mensagem notificando o sucesso ou fracasso de cada ação tomada.
+
+**Reprodução Youtube com URL Padrão** Os usuários têm a capacidade de cadastrar o trailer do filme utilizando a URL padrão do YouTube, sem a necessidade de obter o link de incorporação específico. O sistema implementa uma função interna que formata automaticamente esses links para o formato de incorporação adequado.
 
 ## 🏁 Telas da aplicação
 ### Tela inicial:
