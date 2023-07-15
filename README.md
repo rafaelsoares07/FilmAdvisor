@@ -56,3 +56,7 @@ Este projeto é um site de filmes personalizado, desenvolvido com base nos princ
 
 ### Tela de Edição de Filmes:
 ![screencapture-localhost-curso-php-udemy-Curso-FilmAdvisor-dashboard-php-2023-07-15-15_34_09 (1)](https://github.com/rafaelsoares07/FilmAdvisor/assets/88918826/40af41ca-a3d3-4cf5-83d9-aebe2460cafd)
+
+## Tela de Busca Filmes por Título:
+![screencapture-localhost-curso-php-udemy-Curso-FilmAdvisor-movieseach-php-2023-07-15-16_03_58](https://github.com/rafaelsoares07/FilmAdvisor/assets/88918826/cf47f92e-e5f6-4262-8bb8-767c9b892152)
+
