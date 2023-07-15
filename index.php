@@ -9,7 +9,6 @@ $movieDao = new MovieDAO($conn, $BASE_URL);
 
 $movies = $movieDao->findAll();
 
-
 $movies_acao = $movieDao->findByCategory("Ação");
 $movies_comedia = $movieDao->findByCategory("Comédia");
 $movies_terror = $movieDao->findByCategory("Terror");
